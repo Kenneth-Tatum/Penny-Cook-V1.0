@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import {Header} from "./components/header";
+import Header from "./components/header";
 export default function Index() {
   return (
     <View

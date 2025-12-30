@@ -1,17 +1,27 @@
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { StyleSheet, Text } from "react-native";
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-export const Header = () => {
+export default function Header() {
     return (
-    <SafeAreaView style = {styles.header}>
-        <Text style = {styles.title}>Penny Cook</Text>
+    <SafeAreaView style={styles.header}>
+        <Text style={styles.title}>Welcome{"\n"}to{"\n"}Penny Cook</Text>
     </SafeAreaView>
     )
 };
 const styles = StyleSheet.create({
     header: {
-        
+        width: '100%',
+        backgroundColor: '#1acc49ff',
+        position: 'absolute',
+        top: 0,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
-    title: {},
+    title: {
+        color: 'white',
+        fontSize: 24,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
 });
