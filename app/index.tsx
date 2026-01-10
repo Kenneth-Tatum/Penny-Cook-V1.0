@@ -1,5 +1,6 @@
 import { Text, View } from "react-native";
-import Header from "./components/header";
+import Header from "./components/WelcomePage";
+import WelcomePage from "./components/WelcomePage";
 export default function Index() {
   return (
     <View
@@ -9,7 +10,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-        {Header()}
+        {WelcomePage()}
       
     </View>
   );
