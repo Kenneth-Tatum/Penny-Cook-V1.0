@@ -1,10 +1,5 @@
-import {
-  ImageBackground,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { ImageBackground, StyleSheet, Text, View } from "react-native";
+import Button from "./UI";
 
 // Image asset
 const WELCOME_BACKGROUND = require("../../assets/images/chopping-board2.jpg");
@@ -32,11 +27,13 @@ export default function WelcomePage() {
             Welcome{"\n"}to{"\n"}Penny Cook
           </Text>
         </View>
-        <View style={styles.buttonWrapper}>
+        <View style={styles.buttonWrapperGetStarted}>
           {/* Call-to-action button */}
-          <TouchableOpacity style={styles.startButton}>
-            <Text style={styles.buttonText}>Get Started</Text>
-          </TouchableOpacity>
+          <Button>Get Started</Button>
+        </View>
+        <View style={styles.buttonWrapper}>
+          {/* Log button */}
+          <Button>Log In</Button>
         </View>
       </ImageBackground>
     </View>
@@ -78,8 +75,11 @@ const styles = StyleSheet.create({
   },
 
   // Button wrapper styling
+  buttonWrapperGetStarted: {
+// Bottom margin for spacing between buttons if needed
+  },
   buttonWrapper: {
-    marginBottom: 100,
+    marginBottom: 40,
   },
 
   // Start button styling
